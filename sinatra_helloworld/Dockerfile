@@ -4,6 +4,8 @@ COPY . ./
 
 EXPOSE 4567
 
-RUN gem install sinatra
+RUN gem install bundler
+
+RUN bundle install
 
 CMD ["ruby", "hello_world.rb"]
