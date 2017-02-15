@@ -1,6 +1,8 @@
 FROM ruby:2.4.0
 
-COPY . ./
+# or ADD . ./
+ADD hello_world.rb ./
+ADD Gemfile ./
 
 EXPOSE 4567
 
