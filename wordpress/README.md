@@ -20,3 +20,12 @@ docker-compose up -d
 
 For more Options on how to use the MySQL Docker image:
 https://hub.docker.com/_/mysql/
+
+Persist the data in Wordpress:
+
+docker run --name mysql -v ~/mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=test123 -d mysql:latest
+
+docker run --name wordpress --link mysql:mysql -p 6789:80 -d wordpress
+
+
+
